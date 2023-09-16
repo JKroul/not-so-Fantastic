@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Not So Fantastic - Sugar Comparison</title>
     <style>
-        /* Add your CSS styles here */
+        /* Add CSS styles here */
     </style>
 </head>
 <body>
@@ -20,26 +20,82 @@
             </div>
             <div class="selection-boxes">
                 <label for="your-country">Your Country:</label>
-                <select id="your-country">
-                    <!-- Populate this select box with country options -->
-                </select>
-                <span id="your-country-sugar">Sugar amount: </span>
+<select id="your-country">
+    <option value="austria">Austria</option>
+    <option value="belgium">Belgium</option>
+    <option value="bulgaria">Bulgaria</option>
+    <option value="croatia">Croatia</option>
+    <option value="cyprus">Cyprus</option>
+    <option value="czech-republic">Czech Republic</option>
+    <option value="denmark">Denmark</option>
+    <option value="estonia">Estonia</option>
+    <option value="finland">Finland</option>
+    <option value="france">France</option>
+    <option value="germany">Germany</option>
+    <option value="greece">Greece</option>
+    <option value="hungary">Hungary</option>
+    <option value="ireland">Ireland</option>
+    <option value="italy">Italy</option>
+    <option value="latvia">Latvia</option>
+    <option value="lithuania">Lithuania</option>
+    <option value="luxembourg">Luxembourg</option>
+    <option value="malta">Malta</option>
+    <option value="netherlands">Netherlands</option>
+    <option value="poland">Poland</option>
+    <option value="portugal">Portugal</option>
+    <option value="romania">Romania</option>
+    <option value="slovakia">Slovakia</option>
+    <option value="slovenia">Slovenia</option>
+    <option value="spain">Spain</option>
+    <option value="sweden">Sweden</option>
+    <option value="us">United States</option>
+    <option value="canada">Canada</option>
+    <option value="uk">United Kingdom</option>
+    <option value="australia">Australia</option>
+</select>
+<span id="your-country-sugar">Sugar amount: </span>
 
-                <label for="compare-country">Country to Compare:</label>
-                <select id="compare-country">
-                    <!-- Populate this select box with country options -->
-                </select>
-                <span id="compare-country-sugar">Sugar amount: </span>
+<label for="compare-country">Country to Compare:</label>
+<select id="compare-country">
+    <option value="austria">Austria</option>
+    <option value="belgium">Belgium</option>
+    <option value="bulgaria">Bulgaria</option>
+    <option value="croatia">Croatia</option>
+    <option value="cyprus">Cyprus</option>
+    <option value="czech-republic">Czech Republic</option>
+    <option value="denmark">Denmark</option>
+    <option value="estonia">Estonia</option>
+    <option value="finland">Finland</option>
+    <option value="france">France</option>
+    <option value="germany">Germany</option>
+    <option value="greece">Greece</option>
+    <option value="hungary">Hungary</option>
+    <option value="ireland">Ireland</option>
+    <option value="italy">Italy</option>
+    <option value="latvia">Latvia</option>
+    <option value="lithuania">Lithuania</option>
+    <option value="luxembourg">Luxembourg</option>
+    <option value="malta">Malta</option>
+    <option value="netherlands">Netherlands</option>
+    <option value="poland">Poland</option>
+    <option value="portugal">Portugal</option>
+    <option value="romania">Romania</option>
+    <option value="slovakia">Slovakia</option>
+    <option value="slovenia">Slovenia</option>
+    <option value="spain">Spain</option>
+    <option value="sweden">Sweden</option>
+    <option value="us">United States</option>
+    <option value="canada">Canada</option>
+    <option value="uk">United Kingdom</option>
+    <option value="australia">Australia</option>
+</select>
+<span id="compare-country-sugar">Sugar amount: </span>
+
             </div>
         </section>
-
-        <!-- Add more content here, such as the sugar content data display -->
     </main>
-
     <script>
-        // Sample function to fetch and update sugar content
         function updateSugarAmount(country, spanId) {
-            // Replace this with your actual JSON data retrieval logic
             fetch(`no-so-Fantastic/data/${country.toLowerCase()}.json`)
                 .then(response => response.json())
                 .then(data => {
@@ -48,8 +104,6 @@
                 })
                 .catch(error => console.error('Error fetching data: ', error));
         }
-
-        // Event listeners for dropdown selection change
         document.getElementById('your-country').addEventListener('change', function () {
             const selectedCountry = this.value;
             updateSugarAmount(selectedCountry, 'your-country-sugar');
