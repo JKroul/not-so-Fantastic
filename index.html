@@ -149,7 +149,7 @@ span {
     </main>
     <script>
         function updateSugarAmount(country, spanId) {
-            fetch(`no-so-Fantastic/data/${country.toLowerCase()}.json`)
+            fetch(`data/${country.toLowerCase()}.json`)
                 .then(response => response.json())
                 .then(data => {
                     const sugarAmount = data.sugarPer100ml;
