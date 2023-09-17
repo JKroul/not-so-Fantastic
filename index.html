@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Not So Fantastic - Sugar Comparison</title>
-     <style>
+    <title>Not So Fantastic - Sugar Comparison</title><style>
         html, body, h1, h2, p, ul, li {
             margin: 0;
             padding: 0;
@@ -29,6 +28,8 @@
             padding: 30px; 
             justify-content: space-between;
             align-items: center;
+            display: flex;
+            
         }
         
         .image-container {
@@ -44,11 +45,15 @@
         }
         
         .content-container {
+            max-width: 100%;
+            margin-right: 0px;
+            display: inline-block;
             flex: 2;
+            align-items: center;
         }
         
         .selection-boxes {
-            max-width: 26%; 
+            max-width: 100%; 
             margin: 0 auto;
         }
         
